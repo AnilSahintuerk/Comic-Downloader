@@ -149,8 +149,10 @@ class Make(abc.ABC):
         pass
 
     def make_chapters(self, begin, end):
-        for i in range(begin, end + 2):
+        end += 1
+        for i in range(begin, end):
             self.make_chapter(i)
+            print('Making Chapter: ' + str(i))
         return
 
 
